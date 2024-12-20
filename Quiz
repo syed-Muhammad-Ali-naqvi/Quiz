@@ -1,0 +1,83 @@
+import time
+import random
+print("\t-------- \"TEST YOURSELF\" --------\n")
+
+name = input("Enter your name: ")
+age = int(input("Enter your age: "))
+time.sleep(1)
+ask = input("Are you ready(yes/no): ").lower()
+
+while True:
+    if ask == "yes":
+        i = 1
+        r = 0
+        print("\nI will ask you 5 questions. What you have to do is to guess the answers and input only the option letter (e.g., 'a', 'b', etc.) against each question.")
+        time.sleep(5)
+
+        answer1 = input("\n\tQ) Who is the creator of Python Programming language?\n\t(a) Dennis Ritchie\n\t(b) Charles Babbage\n\t(c) Guido van Rossum\n\t(d) Rasmus Lerdorf\nAnswer: ").lower()
+        if answer1 == 'c':
+            print("Correct answer 💯")
+            r += 1
+        else:
+            print("Incorrect!! Never mind, let's proceed to the next one.")
+
+        time.sleep(2)
+        print("\nHere's your second question!! (Remember to write only the option letter)")
+        time.sleep(2)
+        answer2 = input("\n\tQ) If we remove the RAM (Random Access Memory) from our PC, will it work?\n\t(a) Yes\n\t(b) No\nAnswer: ").lower()
+        if answer2 == 'b':
+            print("Correct Answer 💯")
+            r += 1
+        else:
+            print("Incorrect!! Never mind, let's proceed to the next one.")
+
+        time.sleep(2)
+        print("\nHere's your third question!! (Remember to write only the option letter) ")
+        time.sleep(2)
+        answer3 = input("\n\tQ) What will be the output of print(2 + 3 * 4)?\n\t(a) 14\n\t(b) 20\n\t(c) 234\n\t(d) (2 + 3 * 4)\nAnswer: ").lower()
+        if answer3 == 'a':
+            print("Correct Answer 💯")
+            r += 1
+        else:
+            print("Incorrect!! Never mind, let's proceed to the next one.")
+
+        time.sleep(2)
+        print("Here's your fourth question!! (Remember to write only the option letter)")
+        time.sleep(2)
+        answer4 = input("\n\tQ) Which type of error cannot be detected by a compiler?\n\t(a) Syntax error\n\t(b) Runtime error\n\t(c) Variable error\n\t(d) Logical error\nAnswer: ").lower()
+        if answer4 == 'd':
+            print("Correct Answer 💯")
+            r += 1
+        else:
+            print("Incorrect!! Never mind, let's proceed to the next one.")
+
+        time.sleep(2)
+        print("\nHere's your last question!! (Remember to write only the option letter)")
+        time.sleep(2)
+        answer5 = input("\n\tQ) In programming languages, sets are different from lists because in sets all elements are:\n\t(a) Repeated\n\t(b) Can be modified\n\t(c) Unique\n\t(d) Same\nAnswer: ").lower()
+        if answer5 == 'c':
+            print("Correct Answer 💯")
+            r += 1
+        else:
+            print("Incorrect!! Never mind, let's calculate your result.")
+
+        time.sleep(1)
+        print("\nCalculating result . . . . ")
+        time.sleep(5)
+        print(f"\nDear {name}, You got {r} out of 5")
+        time.sleep(3)
+        if r >= 4 and r <= 5:
+            print("\nBrilliant innings!! 👌👌")
+        else:
+            print("\nBetter luck next time!")
+
+    else:
+        print("\nAlright, come back when you're ready!")
+
+    time.sleep(2)
+    response = input("\n\nDo you want to play again(Y or N): ").upper()
+    if response == 'Y':
+        continue
+    else:
+        print("\n\tHave a nice day then!")
+        break
